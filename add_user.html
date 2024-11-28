@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Add User</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="styleguide.css" />
+        <link rel="stylesheet" href="bootstrap.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="globals.css" />
+          <link rel="stylesheet" href="styleguide.css" />
+          <!-- <link rel="stylesheet" href="style.css" /> -->
+        <script type="text/javascript" src="bootstrap.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+      </head>
+<body>
+
+    <div class="dashboard-menu">
+      
+        <div class="breadcrumb_sec" style="margin-top: 30px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="img/breadcrumb_logo.svg">
+              </div>
+              <div class="col-md-6">
+                <button class="hamburger-button" onclick="toggleMenu()" aria-label="Open Menu"><img class="hamburger-icon" src="img/menu_icon_black.svg" alt="Menu"></button>
+              </div>
+            </div>
+          </div>
+          <div class="container breadcrumb_page">
+            <div class="row">
+              <div class="col-md-12">
+                <ul>
+                  <li><a href="#">Portfolio Title</a></li>
+                  <li><a href="#">Add User</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="user_information">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="user_acoount_1">
+                    <div class="box_contant">
+                      <div class="user_title">
+                        <div class="text-wrapper-2">First/Last Name</div>
+                        <div class="user_edit" ><ul  style="text-decoration: underline;top:10px" ><a href="#">Edit</a></ul></div>
+                      </div>
+                      <div class="user_form">
+                        <div class="flex_wrap">
+                          <div class="form-group">
+                            <label for="firstname">First name</label>
+                            <input type="text" name="first-name">
+                          </div>
+                          <div class="form-group">
+                            <label for="lastname">Last name</label>
+                            <input type="text" name="last-name">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="Email">Email</label>
+                          <input type="email" name="Email">
+                        </div>
+                        <div class="form-group">
+                          <label for="lastname">Mobile number</label>
+                          <input type="number" name="Mobile number">
+                        </div>
+                        <label class="active_sms">
+                          <input type="checkbox" name="smsactive" value="smsactive" id="smsactive" onclick="handleCheckboxClick(this)">SMS Active
+                        </label>
+                        <div class="proerty_info">
+                          <div class="menu_title">
+                            <span><strong>Property title 1</strong></span>
+                          </div>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="maintenance" id="maintenance" onclick="handleCheckboxClick(this)">Maintenance
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="property" id="property" onclick="handleCheckboxClick(this)">Property
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="lease" id="lease" onclick="handleCheckboxClick(this)">Lease
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="accounting" id="accounting" onclick="handleCheckboxClick(this)">Accounting
+                          </label>
+                        </div>
+                        <div class="proerty_info">
+                          <div class="menu_title">
+                            <span><strong>Property title 2</strong></span>
+                          </div>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="maintenance" id="maintenance" onclick="handleCheckboxClick(this)">Maintenance
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="property" id="property" onclick="handleCheckboxClick(this)">Property
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="lease" id="lease" onclick="handleCheckboxClick(this)">Lease
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="accounting" id="accounting" onclick="handleCheckboxClick(this)">Accounting
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_acoount_2">
+                    <div class="box_contant">
+                      <div class="user_title">
+                        <div class="text-wrapper-2">First/Last Name</div>
+                      </div>
+                      <div class="user_form">
+                        <div class="flex_wrap">
+                          <div class="form-group">
+                            <label for="firstname">First name</label>
+                            <input type="text" name="first-name">
+                          </div>
+                          <div class="form-group">
+                            <label for="lastname">Last name</label>
+                            <input type="text" name="last-name">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="Email">Email</label>
+                          <input type="email" name="Email">
+                        </div>
+                        <div class="form-group">
+                          <label for="lastname">Mobile number</label>
+                          <input type="number" name="Mobile number">
+                        </div>
+                        <label class="active_sms">
+                          <input type="checkbox" name="smsactive" value="smsactive" id="smsactive">SMS Active
+                        </label>
+                        <div class="proerty_info">
+                          <div class="menu_title">
+                            <span><strong>Property title 1</strong></span>
+                          </div>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="maintenance" id="maintenance">Maintenance
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="property" id="property">Property
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="lease" id="lease">Lease
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="accounting" id="accounting">Accounting
+                          </label>
+                        </div>
+                        <div class="proerty_info">
+                          <div class="menu_title">
+                            <span><strong>Property title 2</strong></span>
+                          </div>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="maintenance" id="maintenance">Maintenance
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="property" id="property">Property
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="lease" id="lease" onclick="handleCheckboxClick(this)">Lease
+                          </label>
+                          <label class="form-group">
+                            <input type="checkbox" name="department-info" value="accounting" id="accounting" onclick="handleCheckboxClick(this)">Accounting
+                          </label>
+                        </div>
+                        <div class="btn_wrap">
+                          <button type="button" id="update" style="font-weight: 600;">Add User</button>
+                          <button type="button" id="cancel">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+</body>
+</html>

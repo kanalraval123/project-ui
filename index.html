@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="globals.css" />
+      <link rel="stylesheet" href="styleguide.css" />
+      <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+
+  
+  <body>
+    <div class="dashboard-menu">
+      <header class="frame-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <img class="u-align-left u-image u-image-default u-image-1" src="https://assets.nicepagecdn.com/51f4b7da/6305210/images/LeasePixie.png" alt="" style="filter: invert(0);max-width: 140px;width: 104px;margin-top: 7px;height:23px">
+            </div>
+            <div class="col-md-6 col-sm-6 text-right">
+              <button class="hamburger-button" onclick="toggleMenu()" aria-label="Open Menu"><img class="hamburger-icon" src="img/menu.svg" alt="Menu" /></button>
+              <div id="hamburger-menu">
+                <div class="header_menu">
+                  <ul class="menu">
+                    <li class="sub_menu_item show">
+                      <p>Add</p>
+                      <div class="sub_menu_arrow">
+                        <div class="open_arrow" style="display: block;">
+                          <img class="img" src="img/chevron-right.svg">
+                        </div>
+                        <div class="close_arrow" style="display: none;">
+                          <img class="img" src="img/chevron-right-2.svg">
+                        </div>
+                      </div>
+                      <ul class="sub_menu" style="display: block;">
+                        <li>User</li>
+                        <li>Property</li>
+                        <li>Portfolio</li>
+                      </ul>
+                    </li>
+                    <li class="sub_menu_item">
+                      <p>Settings</p>
+                      <div class="sub_menu_arrow">
+                        <div class="open_arrow" style="display: none;">
+                          <img class="img" src="img/chevron-right.svg">
+                        </div>
+                        <div class="close_arrow" style="display: block;">
+                          <img class="img" src="img/chevron-right-2.svg">
+                        </div>
+                      </div>
+                      <ul class="sub_menu" style="display: none;">
+                        <li>User</li>
+                        <li>Portfolio</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="graphs-wrapper"><a href="#">Sign out</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="breadcrumb_sec" style="display: none;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/breadcrumb_logo.svg">
+            </div>
+            <div class="col-md-6">
+              <button class="hamburger-button" onclick="toggleMenu()" aria-label="Open Menu"><img class="hamburger-icon" src="img/menu_icon_black.svg" alt="Menu"></button>
+            </div>
+          </div>
+        </div>
+        <div class="container breadcrumb_page">
+          <div class="row">
+            <div class="col-md-12">
+              <ul>
+                <li><a href="#">Portfolio Title</a></li>
+                <li><a href="#">User Account</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb20">
+              <div class="news_info_box">
+                <div class="box_contant">
+                  <div class="heading">
+                    <div class="text-wrapper-2">Tasks</div>
+                    
+                    <div class="top_features">
+                      <div class="filter_icon">
+                        <div class="filter_open">
+                          <img src="img/switch-vertical.svg">
+                        </div>
+                        <div class="open_menu filter_menu" style="margin-top:-1.6px ; display:none;">
+                          <div class="department_info">
+                            <div class="menu_title">
+                              <span><strong>Department</strong></span>
+                              <p><a href="">View all</a></p>
+                            </div>
+                            <label class="form-group">
+                              <input type="checkbox" name="department-info" value="maintenance" id="maintenance" onclick="handleCheckboxClick(this)">Maintenance
+                            </label>
+                            <label class="form-group">
+                              <input type="checkbox" name="department-info" value="property" id="property" onclick="handleCheckboxClick(this)">Property
+                            </label>
+                            <label class="form-group">
+                              <input type="checkbox" name="department-info" value="lease" id="lease" onclick="handleCheckboxClick(this)">Lease
+                            </label>
+                            <label class="form-group">
+                              <input type="checkbox" name="department-info" value="accounting" id="accounting" onclick="handleCheckboxClick(this)">Accounting
+                            </label>
+                            <label class="form-group">
+                              <input type="checkbox" name="department-info" value="Stars and Invites" id="Star-sand-Invites" onclick="handleCheckboxClick(this)">Stars and Invites
+                            </label>
+                            <label class="form-group">
+                              <input type="checkbox" name="department-info" value="No Stars" id="No-Stars" onclick="handleCheckboxClick(this)">No Stars
+                            </label>
+                          </div>
+                          <div class="workflow_status">
+                            <div class="menu_title">
+                              <span><strong>Workflow status</strong></span>
+                              <p style="display: none;"><a href="">View all</a></p>
+                            </div>
+                            <label class="form-group">
+                              <input type="checkbox" name="workflow-status" value="opentasks" id="open_tasks" onclick="handleCheckboxClick(this)">Open tasks
+                            </label>
+                            <label class="form-group">
+                              <input type="checkbox" name="workflow-status" value="closedtasks" id="closed_tasks" onclick="handleCheckboxClick(this)">Closed tasks
+                            </label>
+                          </div>
+                          <div class="sort_order">
+                            <div class="menu_title">
+                              <span><strong>Sort oder</strong></span>
+                              <p style="display: none;"><a href="">View all</a></p>
+                            </div>
+                            <label class="form-group">
+                              <input type="checkbox" name="sort-order" value="recenttop" id="recent_top" onclick="handleCheckboxClick(this)">Recent on top
+                            </label>
+                            <label class="form-group">
+                              <input type="checkbox" name="sort-order" value="recentbottom" id="recent_bottom" onclick="handleCheckboxClick(this)">Recent on bottom
+                            </label>
+                          </div>
+                        </div>
+                        <div class="filter_refresh">
+                          <img src="img/refresh.svg">
+                        </div>
+                        <div class="filter_add">
+                          <img src="img/plus.svg" alt="Add Workflow">
+                        </div>                      
+                       
+                        <div class="filter_search" style="display: none;">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Add Workflow to... -->
+                      <!-- Initially hidden form -->
+                        <form id="workflow_decribe" class="workflow_add_menu filter_menu">
+                          <div class="menu_title">
+                            <span><strong>Add Workflow to...</strong></span>
+                            <img class="close_form_btn" src="img/x.svg" alt="close">
+                          </div>
+                          <textarea name="decribe-wordflow" rows="3" placeholder="2 line text box"></textarea>
+                          <button type="button" id="suggest_workflow" style="font-weight:700">Suggest workflow</button>
+                          <button type="button" id="skip" style="background-color: #f2f2f2;">Skip</button>
+                        </form>
+                      <!-- Initially hidden Add Menu -->
+                      <div class="add_menu filter_menu" id="workflow_decribe_after_skip">
+                        <div class="menu_space">
+                          <div class="menu_title">
+                            <span><strong>Add Workflow</strong></span>
+                            <img class="close_workflow_btn" src="img/x.svg">
+                          </div>
+                          <div class="add_item_form">
+                            <div class="form-group">
+                              <label for="workflow">Workflow</label>
+                              <select name="Workflow" id="choose_workflow" aria-placeholder="Enter workflow">
+                                <option value="Workflow-1">Workflow-1</option>
+                                <option value="Workflow-2">Workflow-2</option>
+                                <option value="Workflow-3">Workflow-3</option>
+                                <option value="Workflow-4">Workflow-4</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="workflow">Workflow Title</label>
+                              <input type="text" placeholder="Workflow title here">
+                            </div>
+                            <div class="form-group">
+                              <label for="date">Unit</label>
+                              <input type="date" min="2024-01-01" max="2034-01-01" placeholder="Enter date">
+                            </div>
+                            <div class="form-group">
+                              <label for="location">Vendor</label>
+                              <input type="text" placeholder="Enter city">
+                            </div>
+                            <button type="button" id="add">Add</button>
+                          </div>
+                        </div>
+                      </div>
+                    <!--  -->
+                  </div>
+                  <div class="filter_search_box">
+                    <form class="search-box">
+                      <input type="search" name="focus" placeholder="Search" id="search-input" value="">
+                    </form>
+                  </div>
+                  <div class="latest_news_box">                    
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-1"></div>
+                      <div class="tile-revised">
+                        <div class="div-wrapper">
+                          <p class="text-wrapper-4">Roof leak at Dominos Pizza</p>
+                          <div class="div-3">Maintenance (Workflow title here 26 Char limit)</div>
+                          <div class="frame-11">
+                            <div class="div-3">06/05/23 -> 1 days ago</div>
+                            <div class="ellipse-1"></div>
+                            <div class="div-3">Seattle (unit)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-2"></div>
+                          <div class="tile-revised-2">
+                            <div class="div-wrapper">
+                              <p class="text-wrapper-4">Colors for department changed a bit.</p>
+                              <div class="div-3">Property (workflow title)</div>
+                              <div class="frame-11">
+                                <div class="div-3">06/05/23 -> 5 days ago</div>
+                                <div class="ellipse-2"></div>
+                                <div class="div-3">Seattle (unit)</div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-3"></div>
+                        <div class="tile-revised-2">
+                          <div class="div-wrapper">
+                            <p class="text-wrapper-4">40CHAR limit for title</p>
+                            <div class="div-3">Property (workflow title)</div>
+                            <div class="frame-11">
+                              <div class="div-3">06/05/23 -> 5 days ago</div>
+                              <div class="ellipse-3"></div>
+                              <div class="div-3">Seattle (unit)</div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-4"></div>
+                      <div class="tile-revised-2">
+                        <div class="div-wrapper">
+                          <p class="text-wrapper-4">New activity in workflow makes title blue</p>
+                          <div class="div-3">Future planning (workflow title)</div>
+                          <div class="frame-11">
+                            <div class="div-3">Creation date -> 5 days ago</div>
+                            <div class="ellipse-4"></div>
+                            <div class="div-3">Seattle (unit)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-5"></div>
+                      <div class="tile-revised-2">
+                        <div class="div-wrapper">
+                          <p class="text-wrapper-4">40 Char length for Accounting users</p>
+                          <div class="div-3">Accounting (workflow title)</div>
+                          <div class="frame-11">
+                            <div class="div-3">06/05/23 -> Lase workflow update</div>
+                            <div class="ellipse-5"></div>
+                            <div class="div-3">Seattle (unit)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-6"></div>
+                      <div class="tile-revised-2">
+                        <div class="div-wrapper">
+                          <p class="text-wrapper-4">40ACHARFGHIJKLMNOPQRSTUVWZYZ1234561067..</p>
+                          <div class="div-3">Accounting (workflow title)</div>
+                          <div class="frame-11">
+                            <div class="div-3">06/05/23 -> 5 days ago</div>
+                            <div class="ellipse-6"></div>
+                            <div class="div-3">Property City (unit)</div>
+                          </div>                        
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-7"></div>
+                      <div class="tile-revised-2">
+                        <div class="div-wrapper">
+                          <p class="text-wrapper-4">40 Char length for Lease users...</p>
+                          <div class="div-3">Lease (workflow title)</div>
+                          <div class="frame-11">
+                            <div class="div-3">06/05/23 -> 5 days ago</div>
+                            <div class="ellipse-7"></div>
+                            <div class="div-3">Seattle (unit)</div>
+                          </div>                        
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-8"></div>
+                      <div class="tile-revised-2">
+                        <div class="div-wrapper">
+                          <p class="text-wrapper-4">40CHAR Closed workflow </p>
+                          <div class="div-3">Maintenance (workflow title)</div>
+                          <div class="frame-11">
+                            <div class="div-3">06/05/23 -> 06/28/23</div>
+                            <div class="ellipse-8"></div>
+                            <div class="div-3">Seattle (unit)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex_wrap_box">
+                      <div class="rectangle-9"></div>
+                      <div class="tile-revised-2">
+                        <div class="div-wrapper">
+                          <p class="text-wrapper-4">40CHARFGHIJKLMNOPQRSTUVWZYZ1234567890..</p>
+                          <div class="div-3">Lease (workflow title)</div>
+                          <div class="frame-11">
+                            <div class="div-3">06/05/23 -> 55 days ago</div>
+                            <div class="ellipse-9"></div>
+                            <div class="div-3">12345678911..(ABCD5..)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb20">
+              <div class="graph_sec_box">
+                <div class="box_contant">
+                  <div class="tasks-wrapper">
+                    <div class="text-wrapper-2">Performance &amp; Reports</div>
+                  </div>
+                  <div class="graph_report_tabbing">
+                    <div class="tabs">
+                      <ul id="graph-nav">
+                        <li><a href="#graph1">Graphs</a></li>
+                        <li><a href="#report2">Reports</a></li>
+                      </ul> <!-- END tabs-nav -->
+                      <div id="tabs-content">
+                        <div id="graph1" class="tab-content">
+                          <!-- <p>Graphs</p> -->
+                          <a href="#"><!-- when click download pdf -->
+                            <img src="img/graph-1.png">
+                          </a>
+                          <a href="#"><!-- when click download pdf -->
+                            <img src="img/graph-2.png">
+                          </a>
+                          <a href="#"><!-- when click download pdf -->
+                            <img src="img/graph-3.png">
+                          </a>
+                        </div>
+                        <div id="report2" class="tab-content">
+                          <div class="download_pdf">
+                            <ul class="title_pdf">
+                                <li>Name</li>
+                                <li>File type</li>
+                            </ul>
+                            <a href="#" class="download_here">
+                                <ul class="pdf_flex_wrap">
+                                    <li>22 Char Limit</li>
+                                    <li>PDF</li>
+                                </ul>
+                            </a>
+                            <a href="#" class="download_here">
+                                <ul class="pdf_flex_wrap">
+                                    <li>08/23 Bank Transaction</li>
+                                    <li>PDF</li>
+                                </ul>
+                            </a>
+                            <a href="#" class="download_here">
+                                <ul class="pdf_flex_wrap">
+                                    <li>07/23 Rent Roll</li>
+                                    <li>PDF</li>
+                                </ul>
+                            </a>
+                            <a href="#" class="download_here">
+                                <ul class="pdf_flex_wrap">
+                                    <li>Renewal report</li>
+                                    <li>PDF</li>
+                                </ul>
+                            </a>
+                            <a href="#" class="download_here">
+                                <ul class="pdf_flex_wrap">
+                                    <li>22 Char Limit</li>
+                                    <li>PDF</li>
+                                </ul>
+                            </a>
+                            <a href="#" class="download_here">
+                                <ul class="pdf_flex_wrap">
+                                    <li>22 Char Limit</li>
+                                    <li>PDF</li>
+                                </ul>
+                            </a>
+                            </div>
+                        </div>
+                      </div> <!-- END tabs-content -->
+                    </div> <!-- END tabs -->
+                    <!-- <div class="div-4">
+                      <div class="input-with-label">
+                        <div class="input">
+                          <div class="content">
+                            <div class="div-2"><div class="text">3 selected</div></div>
+                          </div>
+                          <img class="img-3" src="img/graph-3.png" />
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="tenant_drop_down">
+                <select name="tenant" id="tenant">
+                  <option value="Bottom 20% Tenant">Bottom 20% Tenant</option>
+                  <option value="Tenant 2">Tenant 2</option>
+                  <option value="Tenant 3">Tenant 3</option>
+                  <option value="Tenant 4">Tenant 4</option>
+                </select>
+              </div> -->
+            </div>
+            
+            <div class="col-md-4 mb20">
+              <div class="properties_box">
+                <div class="portfolio_box">
+                  <div class="heading-2">
+                    <div class="text-wrapper-2">Properties and Portfolios</div>
+                    
+                    <!-- <div class="top_features">
+                      <div class="filter_icon">
+                        <div class="filter_open">
+                          <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+                        <div class="filter_refresh">
+                          <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </div>
+                        <div class="filter_add">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="filter_search">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="portfolio_tabbing">
+                    <div class="tabs">
+                      <ul id="portfolio-nav">
+                        <li><a href="#portfolio1">Property list</a></li>
+                        <li><a href="#portfolio2">Portfolio list</a></li>
+                      </ul>
+                    </div>
+                    <div id="tabs-content">
+                      <div id="portfolio1" class="tab-content">
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Waterfront village</div>
+                            <p class="text-wrapper-12">1452 Banksville Road, Pittsburgh, PA</p>
+                          </div>
+                          <div class="info_detail">
+                            <div class="detail_step">
+                              <ul>
+                                <li><div class="ellipse-1"></div></li>
+                                <li><div class="div-3">Maintenance (4)</div></li>
+                              </ul>
+                              <ul>
+                                <li><div class="ellipse-2"></div></li>
+                                <li><div class="div-3">Leasing (4)</div></li>
+                              </ul>
+                            </div>
+                            <div class="detail_step">
+                              <ul>
+                                <li><div class="ellipse-3"></div></li>
+                                <li><div class="div-3">Property (6)</div></li>
+                              </ul>
+                              <ul>
+                                <li><div class="ellipse-4"></div></li>
+                                <li><div class="div-3">Accounting (2)</div></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Waterfront village</div>
+                            <p class="text-wrapper-12">1452 Banksville Road, Pittsburgh, PA</p>
+                          </div>
+                          <div class="info_detail">
+                            <div class="detail_step">
+                              <ul>
+                                <li><div class="ellipse-1"></div></li>
+                                <li><div class="div-3">Maintenance (4)</div></li>
+                              </ul>
+                              <ul>
+                                <li><div class="ellipse-2"></div></li>
+                                <li><div class="div-3">Leasing (4)</div></li>
+                              </ul>
+                            </div>
+                            <div class="detail_step">
+                              <ul>
+                                <li><div class="ellipse-3"></div></li>
+                                <li><div class="div-3">Property (6)</div></li>
+                              </ul>
+                              <ul>
+                                <li><div class="ellipse-4"></div></li>
+                                <li><div class="div-3">Accounting (2)</div></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Waterfront village</div>
+                            <p class="text-wrapper-12">1452 Banksville Road, Pittsburgh, PA</p>
+                          </div>
+                          <div class="info_detail">
+                            <div class="detail_step">
+                              <ul>
+                                <li><div class="ellipse-1"></div></li>
+                                <li><div class="div-3">Maintenance (4)</div></li>
+                              </ul>
+                              <ul>
+                                <li><div class="ellipse-2"></div></li>
+                                <li><div class="div-3">Leasing (4)</div></li>
+                              </ul>
+                            </div>
+                            <div class="detail_step">
+                              <ul>
+                                <li><div class="ellipse-3"></div></li>
+                                <li><div class="div-3">Property (6)</div></li>
+                              </ul>
+                              <ul>
+                                <li><div class="ellipse-4"></div></li>
+                                <li><div class="div-3">Accounting (2)</div></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="portfolio2" class="tab-content">
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">35CHAR Use this card circular bar color..</div>
+                              <div class="detail_info_property">
+                                <ul class="info_property">
+                                    <li><strong class="pro_num">5</strong> properties</li>
+                                    <li><strong class="pro_size">89000</strong> sqft</li>
+                                </ul>
+                                <div class="pro_rate">
+                                    <span> <img class="ellipse" src="img/ellipse-1.svg" /> 88%</span>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Add static filter/text bar just like reports </div>
+                              <div class="detail_info_property">
+                                <ul class="info_property">
+                                    <li><strong class="pro_num">5</strong> properties</li>
+                                    <li><strong class="pro_size">89000</strong> sqft</li>
+                                </ul>
+                                <div class="pro_rate">
+                                  <span> <img class="ellipse" src="img/ellipse-1.svg" /> 88%</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Grant street Reality Holdings</div>
+                              <div class="detail_info_property">
+                                <ul class="info_property">
+                                    <li><strong class="pro_num">5</strong> properties</li>
+                                    <li><strong class="pro_size">89000</strong> sqft</li>
+                                </ul>
+                                <div class="pro_rate">
+                                  <span> <img class="ellipse" src="img/ellipse-1.svg" /> 88%</span>
+                              </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Grant street Reality Holdings</div>
+                            <div class="detail_info_property">
+                              <ul class="info_property">
+                                  <li><strong class="pro_num">5</strong> properties</li>
+                                  <li><strong class="pro_size">89000</strong> sqft</li>
+                              </ul>
+                              <div class="pro_rate">
+                                <span> <img class="ellipse" src="img/ellipse-1.svg" /> 88%</span>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Grant street Reality Holdings</div>
+                            <div class="detail_info_property">
+                              <ul class="info_property">
+                                  <li><strong class="pro_num">5</strong> properties</li>
+                                  <li><strong class="pro_size">89000</strong> sqft</li>
+                              </ul>
+                              <div class="pro_rate">
+                                <span> <img class="ellipse" src="img/ellipse-1.svg" /> 88%</span>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="portfolio_info">
+                          <div class="info_title">
+                            <div class="text-wrapper-11">Grant street Reality Holdings</div>
+                            <div class="detail_info_property">
+                              <ul class="info_property">
+                                  <li><strong class="pro_num">5</strong> properties</li>
+                                  <li><strong class="pro_size">89000</strong> sqft</li>
+                              </ul>
+                              <div class="pro_rate">
+                                <span> <img class="ellipse" src="img/ellipse-1.svg" /> 88%</span>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="user_info mt-20">
+                  <div class="heading-2">
+                    <div class="text-wrapper-2">Users</div>
+                    <!-- <div class="top_features">
+                      <div class="filter_icon">
+                        <div class="filter_open">
+                          <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+                        <div class="filter_refresh">
+                          <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </div>
+                        <div class="filter_add">
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="filter_search">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="filter_drop_down">
+                    <!-- <label for="cars">Sort by</label> -->
+                    <select name="filter_sort_by" id="filter_sort_by">
+                      <option value="Maintenance, Open task, Recent">Maintenance, Open task, Recent</option>
+                      <option value="Maintenance, Open task, Recent">Maintenance, Open task, Recent</option>
+                      <option value="Maintenance, Open task, Recent">Maintenance, Open task, Recent</option>
+                      <option value="Maintenance, Open task, Recent">Maintenance, Open task, Recent</option>
+                    </select>
+                  </div>
+                  <div class="user_detail">
+                    <div class="user_1">
+                      <div class="frame-29">
+                        <div class="frame-30">
+                          <div class="frame-31">
+                            <div>M</div>
+                          </div>
+                          <div class="frame-32">
+                            <div>P</div>
+                          </div>
+                          <div class="frame-33">
+                            <div>L</div>
+                          </div>
+                          <div class="frame-34">
+                            <div>A</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="user_content">
+                        <div><strong>Jane Doe</strong></div>
+                        <div>Janedoe@gmail.com</div>
+                        <div><a href="tel:908.123.1234">908.123.1234</a></div>
+                        <div class="address">1452 Banksville Road, Pittsburgh, PA&#34;</div>
+                      </div>
+                    </div>
+                    <div class="user_2">
+                      <div class="frame-29">
+                        <div class="frame-30">
+                          <div class="frame-31">
+                            <div>M</div>
+                          </div>
+                          <div class="frame-32">
+                            <div>P</div>
+                          </div>
+                          <div class="frame-33">
+                            <div>L</div>
+                          </div>
+                          <div class="frame-34">
+                            <div>A</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="user_content">
+                        <div><strong>Jane Doe</strong></div>
+                        <div>Janedoe@gmail.com</div>
+                        <div><a href="tel:908.123.1234">908.123.1234</a></div>
+                        <div class="address">1452 Banksville Road, Pittsburgh, PA&#34;</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- dashboard-menu end -->
+
+    <!-- hamburger-button -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector(".hamburger-button");
+    const menu = document.getElementById("hamburger-menu");
+
+    // Function to toggle the menu visibility
+    function toggleMenu() {
+        const isOpen = menu.style.display === "block";
+        menu.style.display = isOpen ? "none" : "block";
+        button.setAttribute("aria-expanded", !isOpen);
+        button.setAttribute("aria-label", isOpen ? "Open Menu" : "Close Menu");
+    }
+
+    // Add event listener to the hamburger button
+    if (button) {
+        button.addEventListener("click", function (event) {
+            event.stopPropagation();  // Prevent the event from propagating to document
+            toggleMenu();
+        });
+    }
+
+    // Close the menu if clicked outside of the menu or button
+    document.addEventListener("click", function (event) {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideButton = button.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideButton) {
+            // If clicked outside, hide the menu
+            menu.style.display = "none";
+            button.setAttribute("aria-expanded", "false");
+            button.setAttribute("aria-label", "Open Menu");
+        }
+    });
+});
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script>
+    // Show the first tab and hide the rest
+    $('#graph-nav li:first-child').addClass('active');
+    $('.graph_report_tabbing .tab-content').hide();
+    $('.graph_report_tabbing .tab-content:first').show();
+    
+    // Click function
+    $('#graph-nav li').click(function(){
+      $('#graph-nav li').removeClass('active');
+      $(this).addClass('active');
+      $('.graph_report_tabbing .tab-content').hide();
+      
+      var activeTab = $(this).find('a').attr('href');
+      $(activeTab).fadeIn();
+      return false;
+    });
+  </script>
+  <script>
+    // Show the first tab and hide the rest
+    $('#portfolio-nav li:first-child').addClass('active');
+    $('.portfolio_tabbing .tab-content').hide();
+    $('.portfolio_tabbing .tab-content:first').show();
+    
+    // Click function
+    $('#portfolio-nav li').click(function(){
+      $('#portfolio-nav li').removeClass('active');
+      $(this).addClass('active');
+      $('.portfolio_tabbing .tab-content').hide();
+      
+      var activeTab = $(this).find('a').attr('href');
+      $(activeTab).fadeIn();
+      return false;
+    });
+  </script>
+  <script>
+  // $(document).ready(function() {
+  //   // Toggle class on clicking the icon
+  //   $(".filter_open").on("click", function(event) {
+  //       $(this).toggleClass("filter_open_menu"); // Toggle the menu class on the icon
+  //       // Prevent the click from propagating further
+  //       event.stopPropagation();
+  //   });
+  //   // Prevent clicks inside .filter_menu from closing the menu
+  //   $(".open_menu").on("click", function(event) {
+  //       event.stopPropagation(); // Prevent click events inside .filter_menu from affecting .filter_open
+  //   });
+
+  //   // When clicking outside, close the menu if .filter_open_menu is active
+  //   $(document).on("click", function() {
+  //       $(".filter_open").removeClass("filter_open_menu"); // Remove the menu class only on clicking outside
+  //   });
+  // });
+
+  // OPEN MENU (old script)
+      document.addEventListener("DOMContentLoaded", function() {
+        const filterAdd = document.querySelector('.filter_open');
+        const addMenu = document.querySelector('.open_menu');
+        const closeButton = addMenu.querySelector('.fa-xmark');
+
+        // Toggle the visibility of the add_menu when filter_add is clicked
+        filterAdd.addEventListener('click', function() {
+          addMenu.style.display = addMenu.style.display === 'none' || addMenu.style.display === '' ? 'block' : 'none';
+        });
+
+        // Close the add_menu when the close button (X) is clicked
+        closeButton.addEventListener('click', function() {
+          addMenu.style.display = 'none';
+        });
+      });
+  // ADD MENU (old script)
+      // document.addEventListener("DOMContentLoaded", function() {
+      //   const filterAdd = document.querySelector('.filter_add');
+      //   const addMenu = document.querySelector('.add_menu');
+      //   const closeButton = addMenu.querySelector('.fa-xmark');
+
+      //   // Toggle the visibility of the add_menu when filter_add is clicked
+      //     filterAdd.addEventListener('click', function() {
+      //     addMenu.style.display = addMenu.style.display === 'none' || addMenu.style.display === '' ? 'block' : 'none';
+      //   });
+
+      //   // Close the add_menu when the close button (X) is clicked
+      //   closeButton.addEventListener('click', function() {
+      //     addMenu.style.display = 'none';
+      //   });
+      // });
+
+
+
+  // =========== NEW SCRIPT ===========
+
+  // document.addEventListener("DOMContentLoaded", function() {
+  //   const filterOpen = document.querySelector('.filter_open');
+  //   const openMenu = document.querySelector('.open_menu');
+  //   const closeButton = openMenu.querySelector('.fa-xmark');
+
+  //   // Toggle visibility of the openMenu
+  //   filterOpen.addEventListener('click', function(event) {
+  //     event.stopPropagation();
+  //     openMenu.style.display = openMenu.style.display === 'none' || openMenu.style.display === '' ? 'block' : 'none';
+  //   });
+
+  //   // Close the openMenu when the close button is clicked
+  //   closeButton.addEventListener('click', function() {
+  //     openMenu.style.display = 'none';
+  //   });
+
+  //   // Close the openMenu when clicking outside
+  //   document.addEventListener('click', function(event) {
+  //     if (!openMenu.contains(event.target) && !filterOpen.contains(event.target)) {
+  //       openMenu.style.display = 'none';
+  //     }
+  //   });
+  // });    
+  </script>
+
+  <!--  THIS IS FOR Department AND Add Workflow to.. -->
+
+ <script>
+ // Wait for the DOM content to fully load
+document.addEventListener('DOMContentLoaded', function () {
+  
+  // Function to hide all menus and reset button styles
+  function hideAllMenusAndResetStyles() {
+    const openMenu = document.querySelector('.open_menu.filter_menu');
+    const workflowForm = document.querySelector('#workflow_decribe');
+    const workflowDecribeAfterSkip = document.querySelector('#workflow_decribe_after_skip');
+    const filterOpenButton = document.querySelector('.filter_open');
+    const filterAddButton = document.querySelector('.filter_add');
+    
+    if (openMenu) openMenu.style.display = 'none';
+    if (workflowForm) workflowForm.style.display = 'none';
+    if (workflowDecribeAfterSkip) workflowDecribeAfterSkip.style.display = 'none';
+    
+    // Reset background colors
+    if (filterOpenButton) filterOpenButton.style.backgroundColor = '';
+    if (filterAddButton) filterAddButton.style.backgroundColor = '';
+  }
+
+  // Handle the "Filter Open" button click
+  const filterOpenButton = document.querySelector('.filter_open');
+  if (filterOpenButton) {
+    filterOpenButton.addEventListener('click', function (event) {
+      const openMenu = document.querySelector('.open_menu.filter_menu');
+      
+      // Prevent hiding when clicking the button itself
+      event.stopPropagation();
+
+      // Hide all menus and reset styles before toggling
+      hideAllMenusAndResetStyles();
+
+      // Set background color for this button
+      filterOpenButton.style.backgroundColor = '#F2F2F2';
+
+      // Toggle the filter menu
+      if (openMenu && (openMenu.style.display === 'none' || openMenu.style.display === '')) {
+        openMenu.style.display = 'block';
+      }
+    });
+  } else {
+    console.error("Element .filter_open not found.");
+  }
+
+  // Handle the "Add Workflow" button click
+  const filterAddButton = document.querySelector('.filter_add');
+  if (filterAddButton) {
+    filterAddButton.addEventListener('click', function (event) {
+      const workflowForm = document.querySelector('#workflow_decribe');
+      const workflowDecribeAfterSkip = document.querySelector('#workflow_decribe_after_skip');
+      
+      // Prevent hiding when clicking the button itself
+      event.stopPropagation();
+
+      // Hide all menus and reset styles before toggling
+      hideAllMenusAndResetStyles();
+
+      // Set background color for this button
+      filterAddButton.style.backgroundColor = '#F2F2F2';
+
+      // Toggle the workflow form
+      if (workflowForm && (workflowForm.style.display === 'none' || workflowForm.style.display === '')) {
+        workflowForm.style.display = 'block';
+        
+      }
+    });
+  } else {
+    console.error("Element .filter_add not found.");
+  }
+
+  // Close menus when clicking outside the designated areas
+  document.addEventListener('click', function () {
+    hideAllMenusAndResetStyles();
+  });
+
+  // Prevent the document click handler from closing the menu when clicking inside the menu areas
+  const menuAreas = document.querySelectorAll('.open_menu.filter_menu, #workflow_decribe');
+  menuAreas.forEach(menu => {
+    menu.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  });
+});
+
+  document.addEventListener('DOMContentLoaded', function () {
+  const skipButton = document.querySelector('#skip');
+  const workflowForm = document.querySelector('#workflow_decribe');
+  const addMenu = document.querySelector('.add_menu');
+  const menuItems = document.querySelectorAll('.sub_menu_item');
+
+  // Function to toggle visibility of workflow form and Add Menu
+  function toggleSkipButtonAction() {
+    if (workflowForm.style.display === 'none') {
+      workflowForm.style.display = 'block';
+      addMenu.style.display = 'none';
+    } else {
+      workflowForm.style.display = 'none';
+      addMenu.style.display = 'block';
+    }
+  }
+
+  // Function to close all open elements
+  function closeAll() {
+    workflowForm.style.display = 'none';
+    addMenu.style.display = 'none';
+    collapseAllSubMenus();
+  }
+
+  // Event listener for the skip button
+  if (skipButton) {
+    skipButton.addEventListener('click', function (event) {
+      toggleSkipButtonAction();
+      event.stopPropagation(); // Prevent click from bubbling to document
+    });
+  } else {
+    console.error("Element #skip not found.");
+  }
+
+  // Attach click handlers to all menu items with the class .sub_menu_item
+  menuItems.forEach(item => {
+    item.addEventListener('click', function (event) {
+      toggleSubMenu(item);
+      event.stopPropagation(); // Prevent click from propagating to document
+    });
+  });
+
+  // Close all elements when clicking outside
+  document.addEventListener('click', function (event) {
+    const clickedInside = event.target.closest('.sub_menu_item') || event.target.closest('#skip') || event.target.closest('#workflow_decribe') || event.target.closest('.add_menu');
+    if (!clickedInside) {
+      closeAll();
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const closeIcon = document.querySelector('.close_workflow_btn'); // Select the close icon
+  const addMenu = document.querySelector('.add_menu.filter_menu'); // Select the target div
+
+  if (closeIcon && addMenu) {
+    closeIcon.addEventListener('click', function () {
+      addMenu.style.display = 'none'; // Hide the div
+    });
+  } else {
+    console.error("Close icon or target div not found.");
+  }
+});
+
+ </script>
+
+
+
+
+<script>
+  // Select the close button
+const closeButton = document.querySelector('.close_form_btn');
+
+// Add a click event listener to the close button
+closeButton.addEventListener('click', function () {
+  // Find the form element to hide
+  const formElement = document.getElementById('workflow_decribe');
+  if (formElement) {
+    formElement.style.display = 'none'; // Hide the form
+  }
+});
+
+  function handleCheckboxClick(clickedCheckbox) {
+    const checkboxes = document.querySelectorAll(`input[name="${clickedCheckbox.name}"]`);
+    checkboxes.forEach(checkbox => {
+      if (checkbox !== clickedCheckbox) {
+        checkbox.checked = false;
+      }
+    });
+  }
+ </script>
+  
+<!--  THIS IS FOR Add AND Setting -->
+  <script>
+
+       // Function to collapse all submenus
+    function collapseAllSubMenus() {
+    const subMenus = document.querySelectorAll('.sub_menu');
+    const arrows = document.querySelectorAll('.sub_menu_arrow .open_arrow, .sub_menu_arrow .close_arrow');
+    const menuTexts = document.querySelectorAll('.sub_menu_item > p');
+    const menuTextsShow = document.querySelectorAll('.sub_menu_item.show > p');
+      
+
+    // Hide all submenus and reset text styles
+    subMenus.forEach(menu => menu.style.display = 'none');
+    menuTexts.forEach(text => text.style.fontWeight = 'normal');
+    menuTextsShow.forEach(text => text.style.fontWeight = 'normal');
+
+    // Ensure all arrows are reset
+    arrows.forEach(arrow => {
+      if (arrow.classList.contains('open_arrow')) {
+        arrow.style.display = 'none'; // Hide open arrow
+      } else {
+        arrow.style.display = 'block'; // Show close arrow
+      }
+    });
+  }
+
+  // Function to toggle a specific submenu
+  function toggleSubMenu(parentItem) {
+    const subMenu = parentItem.querySelector('.sub_menu');
+    const openArrow = parentItem.querySelector('.open_arrow');
+    const closeArrow = parentItem.querySelector('.close_arrow');
+    const menuText = parentItem.querySelector('p');
+
+    if (subMenu) {
+      if (subMenu.style.display === 'block') {
+        // Collapse the submenu
+        subMenu.style.display = 'none';
+        openArrow.style.display = 'none'; // Hide open arrow
+        closeArrow.style.display = 'block'; // Show close arrow
+        menuText.style.fontWeight = 'normal'; // Normal font
+      } else {
+        // Collapse others and expand this one
+        collapseAllSubMenus();
+        subMenu.style.display = 'block';
+        openArrow.style.display = 'block'; // Show open arrow
+        closeArrow.style.display = 'none'; // Hide close arrow
+        menuText.style.fontWeight = 'bold'; // Bold font
+      }
+    }
+  }
+     </script>
+  </body>
+</html>
